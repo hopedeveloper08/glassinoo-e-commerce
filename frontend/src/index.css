@@ -1,3 +1,61 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "glassinoo";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+
+  --color-base-100: oklch(99% 0.001 106);   /* پس‌زمینه خیلی روشن */
+  --color-base-200: oklch(96% 0.002 106);   /* پس‌زمینه دوم */
+  --color-base-300: oklch(90% 0.01 106);    /* پس‌زمینه سوم */
+  --color-base-content: oklch(20% 0.01 106);/* متن اصلی */
+
+  --color-primary: oklch(60% 0.18 250);     /* آبی برند */
+  --color-primary-content: oklch(98% 0.01 250);
+
+  --color-secondary: oklch(75% 0.02 250);  /* نقره‌ای روشن */
+  --color-secondary-content: oklch(25% 0.01 250);
+
+  --color-accent: oklch(70% 0.16 240);     /* آبی روشن‌تر (هایلایت) */
+  --color-accent-content: oklch(98% 0.01 240);
+
+  --color-neutral: oklch(35% 0.01 250);    /* خاکستری تیره */
+  --color-neutral-content: oklch(98% 0.01 250);
+
+  --color-info: oklch(68% 0.14 230);
+  --color-info-content: oklch(97% 0.01 230);
+
+  --color-success: oklch(70% 0.15 160);
+  --color-success-content: oklch(98% 0.01 160);
+
+  --color-warning: oklch(78% 0.18 80);
+  --color-warning-content: oklch(25% 0.01 80);
+
+  --color-error: oklch(60% 0.22 25);
+  --color-error-content: oklch(96% 0.01 25);
+
+  /* 🎨 شِیب و بافت */
+  --radius-selector: 0.5rem;  /* گردی متوسط برای انتخابگر */
+  --radius-field: 0.375rem;   /* گردی کمتر برای اینپوت */
+  --radius-box: 0.75rem;      /* گردی بیشتر برای کارت/باکس */
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;              /* خط مرز مینیمال */
+  --border-color: oklch(85% 0.01 250); /* خاکستری مایل به آبی */
+  --border-focus: oklch(60% 0.18 250); /* آبی برند در فوکوس */
+
+  --depth: 2;                 /* کمی سایه (نه خیلی فلت، نه خیلی برجسته) */
+  --shadow-color: oklch(0% 0 0 / 0.1);
+
+  --noise: 0;                 /* بدون نویز → حس شفاف/طلق */
+}
+
+
+@import "vazirmatn/Vazirmatn-font-face.css";
 body {
-    font-family: "Vazirmatn", sans-serif;
+  font-family: "Vazirmatn", sans-serif;
 }
