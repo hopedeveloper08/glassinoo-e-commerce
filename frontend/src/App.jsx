@@ -7,15 +7,16 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from './main/Main.jsx';
 import Navbar from './base/navbar/Navbar.jsx';
 
-function App() {
+export default function App() {
   return (<>
     <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/order/" element={<div>order</div>}  />
+        <Route path="/cart/"  element={<div>cart</div>} />
+        <Route path="/tracking/"  element={<div>tracking</div>} />
       </Routes>
     </BrowserRouter>
   </>)
 }
-
-export default App
