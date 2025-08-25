@@ -1,9 +1,7 @@
-import Header from './components/Header'
-import Gallery from './components/table-gallery/Gallery'
+import Header from "./components/Header";
 
 export default function Main() {
-  return (<>
+  return <>
     <Header />
-    {/* <Gallery /> */}
-  </>)
+  </>
 }

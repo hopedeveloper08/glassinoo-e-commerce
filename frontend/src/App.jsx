@@ -1,22 +1,28 @@
 import './index.css'
 
 import axios from 'axios'
-axios.defaults.baseURL = 'http://127.0.0.1:8000/api/';
+axios.defaults.baseURL = 'http://192.168.1.6:8000/api/';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from './main/Main.jsx';
-import Navbar from './base/navbar/Navbar.jsx';
+import Navbar from './navbar/Navbar.jsx';
+import Order from './order/Order.jsx';
+import AboutUs from './about-us/AboutUs.jsx';
 
 export default function App() {
   return (<>
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/order/" element={<div>order</div>}  />
-        <Route path="/cart/"  element={<div>cart</div>} />
-        <Route path="/tracking/"  element={<div>tracking</div>} />
-      </Routes>
-    </BrowserRouter>
+    <div className="w-full">
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/order/" element={<Order />} />
+          <Route path="/cart/" element={<div>cart</div>} />
+          <Route path="/tracking/" element={<div>tracking</div>} />
+          <Route path="/about-us/" element={<AboutUs />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+
   </>)
 }

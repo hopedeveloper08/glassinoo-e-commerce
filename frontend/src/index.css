@@ -54,6 +54,12 @@
   --noise: 0;                 /* بدون نویز → حس شفاف/طلق */
 }
 
+.menu-active {
+  @apply bg-accent text-accent-content rounded-lg;
+}
+.dock-active {
+  @apply text-accent rounded-lg;
+}
 
 @import "vazirmatn/Vazirmatn-font-face.css";
 body {
