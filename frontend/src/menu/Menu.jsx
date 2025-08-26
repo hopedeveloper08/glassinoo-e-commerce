@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
-import DesktopMenu from "./components/DesktopMenu"
-import MobileMenu from "./components/MobileMenu"
-import SocialMedia from "../about-us/components/SocialMedia"
+import DesktopMenu from "./components/DesktopMenu.jsx"
+import MobileMenu from "./components/MobileMenu.jsx"
+import SocialMedia from "../about-us/components/SocialMedia.jsx"
 
 import isMobile from '../isMobile.js'
 
