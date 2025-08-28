@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom';
+import menuItems from '../../../utils/menuItems'
 
-export default function DesktopMenu(props) {
-  return (<>
-    <ul className="menu menu-horizontal space-x-4 bg-base-200 px-8 rounded-box">
-      {props.menu.map((item) => (
-        <li key={item.title} className=''>
+export default function DesktopMenuItems() {
+  return (
+    <ul className="menu menu-horizontal space-x-2">
+      {menuItems.map((item) => (
+        <li key={item.title}>
           <NavLink to={item.link} className={({ isActive }) => (isActive ? 'menu-active' : '')}>
             <div dangerouslySetInnerHTML={{ __html: item.icon }} />
             {item.title}
@@ -12,5 +13,5 @@ export default function DesktopMenu(props) {
         </li>
       ))}
     </ul>
-  </>)
+  )
 }

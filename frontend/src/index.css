@@ -7,21 +7,21 @@
   prefersdark: false;
   color-scheme: "light";
 
-  --color-base-100: oklch(99% 0.001 106);   /* پس‌زمینه خیلی روشن */
-  --color-base-200: oklch(96% 0.002 106);   /* پس‌زمینه دوم */
-  --color-base-300: oklch(90% 0.01 106);    /* پس‌زمینه سوم */
-  --color-base-content: oklch(20% 0.01 106);/* متن اصلی */
+  --color-base-100: oklch(99% 0.001 106);   
+  --color-base-200: oklch(96% 0.002 106); 
+  --color-base-300: oklch(90% 0.01 106);   
+  --color-base-content: oklch(20% 0.01 106);
 
-  --color-primary: oklch(60% 0.18 250);     /* آبی برند */
+  --color-primary: oklch(60% 0.18 250); 
   --color-primary-content: oklch(98% 0.01 250);
 
-  --color-secondary: oklch(75% 0.02 250);  /* نقره‌ای روشن */
+  --color-secondary: oklch(75% 0.02 250); 
   --color-secondary-content: oklch(25% 0.01 250);
 
-  --color-accent: oklch(70% 0.16 240);     /* آبی روشن‌تر (هایلایت) */
+  --color-accent: oklch(70% 0.16 240);    
   --color-accent-content: oklch(98% 0.01 240);
 
-  --color-neutral: oklch(35% 0.01 250);    /* خاکستری تیره */
+  --color-neutral: oklch(35% 0.01 250);   
   --color-neutral-content: oklch(98% 0.01 250);
 
   --color-info: oklch(68% 0.14 230);
@@ -36,29 +36,28 @@
   --color-error: oklch(60% 0.22 25);
   --color-error-content: oklch(96% 0.01 25);
 
-  /* 🎨 شِیب و بافت */
-  --radius-selector: 0.5rem;  /* گردی متوسط برای انتخابگر */
-  --radius-field: 0.375rem;   /* گردی کمتر برای اینپوت */
-  --radius-box: 0.75rem;      /* گردی بیشتر برای کارت/باکس */
+  --radius-selector: 0.5rem; 
+  --radius-field: 0.375rem;   
+  --radius-box: 0.75rem;      
 
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
 
-  --border: 1px;              /* خط مرز مینیمال */
-  --border-color: oklch(85% 0.01 250); /* خاکستری مایل به آبی */
-  --border-focus: oklch(60% 0.18 250); /* آبی برند در فوکوس */
+  --border: 1px;              
+  --border-color: oklch(85% 0.01 250); 
+  --border-focus: oklch(60% 0.18 250); 
 
-  --depth: 2;                 /* کمی سایه (نه خیلی فلت، نه خیلی برجسته) */
+  --depth: 2;                 
   --shadow-color: oklch(0% 0 0 / 0.1);
 
-  --noise: 0;                 /* بدون نویز → حس شفاف/طلق */
+  --noise: 0;                
 }
 
 .menu-active {
-  @apply bg-accent text-accent-content rounded-lg;
+  @apply bg-base-300 text-secondary-content rounded-box shadow-sm;
 }
 .dock-active {
-  @apply text-accent rounded-lg;
+  @apply text-secondary-content rounded-box;
 }
 
 @import "vazirmatn/Vazirmatn-font-face.css";
