@@ -54,10 +54,10 @@
 }
 
 .menu-active {
-  @apply bg-base-300 text-secondary-content rounded-box shadow-sm;
+  @apply bg-base-200 text-secondary-content rounded-sm shadow-sm;
 }
 .dock-active {
-  @apply text-secondary-content rounded-box;
+  @apply text-secondary-content rounded-sm shadow-sm;
 }
 
 @import "vazirmatn/Vazirmatn-font-face.css";

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { HiMiniArrowRightEndOnRectangle } from "react-icons/hi2";
 
 export default function Banner() {
   return (
@@ -12,6 +13,7 @@ export default function Banner() {
         </p>
         <Link to={'/order/'} >
           <button class="btn btn-primary btn-lg animate-bounce mt-3">
+            <HiMiniArrowRightEndOnRectangle size={20} />
             شروع سفارش
           </button>
         </Link>
