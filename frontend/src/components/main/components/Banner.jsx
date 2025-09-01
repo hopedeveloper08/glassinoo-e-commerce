@@ -12,7 +12,7 @@ export default function Banner() {
           طلق رو میزی مقاوم، دقیقاً مطابق سلیقه و میز شما
         </p>
         <Link to={'/order/'} >
-          <button class="btn btn-primary btn-lg animate-bounce mt-3">
+          <button className="btn btn-primary btn-lg animate-bounce mt-3">
             <HiMiniArrowRightEndOnRectangle size={20} />
             شروع سفارش
           </button>

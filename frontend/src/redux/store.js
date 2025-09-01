@@ -1,10 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
-import orderStepsReducer from './features/order-step/orderStepsSlice'
+import { listTableType, listTableMaterial } from './features/order/tableSlice'
+import orderSlice from './features/order/orderSlice'
 
-
-const rootReducer = { 
-  step: orderStepsReducer,
+const rootReducer = {
+  order: orderSlice.reducer,
+  listTableType: listTableType.reducer,
+  listTableMaterial: listTableMaterial.reducer,
 }
+
 const initialState = {}
 
 const store = configureStore({

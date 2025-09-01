@@ -5,22 +5,22 @@ import { FaRegPenToSquare } from "react-icons/fa6";
 import { HiOutlineScissors } from "react-icons/hi2";
 import { HiOutlineCheckBadge } from "react-icons/hi2";
 
-import TableType from '../components/TableGallery';
+import TableGallery from '../components/tables/TableGallery';
 
 const steps = [
   {
     id: 1,
     title: 'نوع میز',
     description: 'نوع میز خود را از گالری زیر انتخاب کنید',
-    component: TableType,
-    icon: <GiDesk />,
+    component: TableGallery,
+    icon: <GiTable />,
   },
   {
     id: 2,
     title: 'جنس میز',
     description: 'جنس میز خود را از گالری زیر انتخاب کنید',
-    component: TableType,
-    icon: <GiTable />,
+    component: TableGallery,
+    icon: <GiDesk />,
   },
   {
     id: 3,
