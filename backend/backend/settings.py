@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     
     'admin_panel',
     'table',
+    'talq',
 ]
 
 MIDDLEWARE = [

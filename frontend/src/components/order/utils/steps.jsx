@@ -5,7 +5,8 @@ import { FaRegPenToSquare } from "react-icons/fa6";
 import { HiOutlineScissors } from "react-icons/hi2";
 import { HiOutlineCheckBadge } from "react-icons/hi2";
 
-import TableGallery from '../components/tables/TableGallery';
+import TableGallery from '../components/TableGallery';
+import TalqTypeGallery from '../components/TalqTypeGallery';
 
 const steps = [
   {
@@ -25,14 +26,14 @@ const steps = [
   {
     id: 3,
     title: 'طلق',
-    description: 'جنس، ضخامت و عرض طلق خود را انتخاب کنید',
-    component: null,
+    description: 'جنس طلق خود را انتخاب کنید',
+    component: TalqTypeGallery,
     icon: <FaToiletPaper />,
   },
   {
     id: 4,
-    title: 'طول',
-    description: 'طول طلق خود را وارد کنید',
+    title: 'ابعاد',
+    description: 'ضخامت و ابعاد طلق خود را وارد کنید',
     component: null,
     icon: <FaRegPenToSquare />,
   },

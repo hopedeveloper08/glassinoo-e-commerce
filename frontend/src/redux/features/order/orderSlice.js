@@ -5,8 +5,11 @@ const orderSlice = createSlice({
   initialState: {
     tableType: null,
     tableMaterial: null,
-    talq: null,
+    talqType: null,
+    talqThickness: 0,
+    shape: null,
     talqLength: 0,
+    talqWidth: 0,
     cut: null,
   },
   reducers: {
@@ -16,11 +19,20 @@ const orderSlice = createSlice({
     addTableMaterial(state, action) {
       state.tableMaterial = action.payload
     },
-    addTalq(state, action) {
-      state.talq = action.payload
+    addTalqType(state, action) {
+      state.talqType = action.payload
+    },
+    addThickness(state, action) {
+      state.talqThickness = action.payload
+    },
+    addShape(state, action) {
+      state.shape = action.payload
     },
     addLength(state, action) {
       state.talqLength = action.payload
+    },
+    addWidth(state, action) {
+      state.talqWidth = action.payload
     },
     addCut(state, action) {
       state.cut = action.payload
@@ -28,5 +40,5 @@ const orderSlice = createSlice({
   }
 })
 
-export const { addTableType, addTableMaterial, addTalq, addLength, addCut } = orderSlice.actions
+export const { addTableType, addTableMaterial, addTalqType, addThickness, addShape, addLength, addWidth, addCut } = orderSlice.actions
 export default orderSlice

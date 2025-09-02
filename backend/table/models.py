@@ -36,7 +36,7 @@ class TableTypeImage(models.Model):
         verbose_name_plural = 'عکس نوع میز'
     
     def __str__(self):
-        return f"Image for {self.table.title}"
+        return f"عکس برای نوع میز {self.table.title}"
 
 
 class TableMaterial(models.Model):
@@ -74,5 +74,5 @@ class TableMaterialImage(models.Model):
         verbose_name_plural = 'عکس جنس میز'
     
     def __str__(self):
-        return f"Image for {self.table.title}"
+        return f"عکس برای جنس میز {self.table.title}"
     

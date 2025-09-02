@@ -8,6 +8,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
 
     path('api/tables/', include('table.urls')),
+    path('api/talqs/', include('talq.urls')),
 ] 
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
