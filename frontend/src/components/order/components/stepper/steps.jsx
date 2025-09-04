@@ -2,11 +2,11 @@ import { GiTable } from "react-icons/gi";
 import { GiDesk } from "react-icons/gi";
 import { FaToiletPaper } from "react-icons/fa6";
 import { FaRegPenToSquare } from "react-icons/fa6";
-import { HiOutlineScissors } from "react-icons/hi2";
 import { HiOutlineCheckBadge } from "react-icons/hi2";
 
-import TableGallery from '../components/TableGallery';
-import TalqTypeGallery from '../components/TalqTypeGallery';
+import TableGallery from '../gallery/TableGallery';
+import TalqTypeGallery from '../gallery/TalqTypeGallery';
+import TalqInfo from '../talq-info/TalqInfo'
 
 const steps = [
   {
@@ -33,20 +33,13 @@ const steps = [
   {
     id: 4,
     title: 'ابعاد',
-    description: 'ضخامت و ابعاد طلق خود را وارد کنید',
-    component: null,
+    description: 'ضخامت مورد نظر را انتخاب کنید. سپس براساس شکل میز خود، ابعاد میز خود را وارد کنید',
+    component: TalqInfo,
     icon: <FaRegPenToSquare />,
   },
   {
     id: 5,
-    title: 'برش',
-    description: 'شکل میز و نوع برش را انتخاب کنید',
-    component: null,
-    icon: <HiOutlineScissors />,
-  },
-  {
-    id: 6,
-    title: 'تایید',
+    title: 'فاکتور',
     description: 'خلاصه سفارش',
     component: null,
     icon: <HiOutlineCheckBadge />,

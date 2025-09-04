@@ -10,7 +10,6 @@ const orderSlice = createSlice({
     shape: null,
     talqLength: 0,
     talqWidth: 0,
-    cut: null,
   },
   reducers: {
     addTableType(state, action) {
@@ -33,9 +32,6 @@ const orderSlice = createSlice({
     },
     addWidth(state, action) {
       state.talqWidth = action.payload
-    },
-    addCut(state, action) {
-      state.cut = action.payload
     },
   }
 })

@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { listTableType, listTableMaterial } from './features/order/tableSlice'
-import { listTalqType } from './features/order/talqSlice'
+import { listTalqType, listTalq } from './features/order/talqSlice'
 import orderSlice from './features/order/orderSlice'
 
 const rootReducer = {
@@ -8,6 +8,7 @@ const rootReducer = {
   listTableType: listTableType.reducer,
   listTableMaterial: listTableMaterial.reducer,
   listTalqType: listTalqType.reducer,
+  listTalq: listTalq.reducer,
 }
 
 const initialState = {}

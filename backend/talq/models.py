@@ -40,3 +40,21 @@ class TalqTypeImage(models.Model):
     
     def __str__(self):
         return f"عکس برای طلق {self.talq_type.title}"
+
+
+class Talq(models.Model):
+    talq_type = models.ForeignKey(TalqType, verbose_name='نوع طلق', on_delete=models.CASCADE)
+    thickness = models.FloatField(verbose_name='ضخامت')
+    width = models.PositiveIntegerField(verbose_name='عرض')
+    price = models.PositiveIntegerField(verbose_name='قیمت')
+    
+    class Meta:
+        verbose_name = 'طلق'
+        verbose_name_plural = 'طلق'
+
+    def __str__(self):
+        return f'نوع: {self.talq_type.title}, ضخامت: {self.thickness}, عرض: {self.width}'
+
+    @classmethod
+    def get_talqs_by_type(cls, type_id):
+        return cls.objects.filter(talq_type__id=type_id)

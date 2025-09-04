@@ -34,3 +34,35 @@ export const listTalqType = createSlice({
     })
   }
 })
+
+export const fetchTalq = createAsyncThunk(
+  'fetchTalq',
+  async (typeId) => {
+    const { data } = await talqServices.getTalq(typeId)        
+    return data.talqs
+  }
+)
+
+export const listTalq = createSlice({
+  name: 'listTalq',
+  initialState: {
+    talqs: [],
+    loading: false,
+    error: '',
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchTalq.pending, (state) => {
+      state.loading = true
+    })
+    builder.addCase(fetchTalq.fulfilled, (state, action) => {    
+      state.loading = false
+      state.talqs = action.payload
+      state.error = ''
+    })
+    builder.addCase(fetchTalq.rejected, (state, action) => {
+      state.loading = false
+      state.talqs = []
+      state.error = action.error
+    })
+  }
+})
