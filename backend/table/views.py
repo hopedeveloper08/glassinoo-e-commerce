@@ -9,10 +9,10 @@ from .models import TableType, TableMaterial
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def get_tables_type(request):
-    return Response({'tables': TableType.get_tables_list(request)}, HTTP_200_OK)
+    return Response({'data': TableType.get_tables_list(request)}, HTTP_200_OK)
 
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def get_tables_material(request):
-    return Response({'tables': TableMaterial.get_tables_list(request)}, HTTP_200_OK)
+    return Response({'data': TableMaterial.get_tables_list(request)}, HTTP_200_OK)
