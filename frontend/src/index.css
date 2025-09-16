@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "glassinoo";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+
+  --color-base-100: oklch(99% 0.001 106 / 0.85);
+  --color-base-200: oklch(95% 0.002 106 / 0.85);
+  --color-base-300: oklch(90% 0.01 106 / 0.80);
+  --color-base-content: oklch(22% 0.02 106);
+
+  --color-primary: oklch(60% 0.2 250);
+  --color-primary-content: oklch(98% 0.01 250);
+
+  --color-secondary: oklch(78% 0.05 250);
+  --color-secondary-content: oklch(22% 0.01 250);
+
+  --color-accent: oklch(72% 0.16 240);
+  --color-accent-content: oklch(98% 0.01 240);
+
+  --color-neutral: oklch(32% 0.02 250);
+  --color-neutral-content: oklch(98% 0.01 250);
+
+  --color-success: oklch(68% 0.15 160);
+  --color-error: oklch(58% 0.22 25);
+  --color-warning: oklch(76% 0.18 80);
+
+  --shadow-color: oklch(0% 0 0 / 0.15);
+  --depth: 3;
+
+  --border: 1px;
+  --border-color: oklch(85% 0.01 250);
+  --border-focus: oklch(60% 0.18 250);
+
+  --glass-blur: 12px;
+  --glass-opacity: 0.6;
+}
+
+.btn {
+    @apply rounded-lg
+}
+
+@import "vazirmatn/Vazirmatn-font-face.css";
+body {
+    font-family: "Vazirmatn", sans-serif;
+}
