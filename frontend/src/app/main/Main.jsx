@@ -2,7 +2,7 @@ import Hero from './Hero'
 
 function Main() {
     return (
-        <main>
+        <main className='h-full'>
             <Hero />
         </main>
     )

@@ -3,8 +3,8 @@ import { BsInstagram, BsWhatsapp } from "react-icons/bs";
 
 function DesktopMenu({ menuItems }) {
     return (
-        <div className="max-md:hidden navbar bg-base-300 shadow">
-            <div className="lg:container mx-auto px-4 flex justify-between">
+        <div className="navbar bg-base-300 shadow py-1">
+            <div className="lg:container w-full mx-auto px-4 flex justify-between">
                 <div className="flex gap-4 items-center">
 
                     {/* brand */}
@@ -21,7 +21,7 @@ function DesktopMenu({ menuItems }) {
                     </Link>
 
                     {/* items */}
-                    <ul className="menu menu-horizontal">
+                    <ul className="menu menu-horizontal max-md:hidden">
                         {menuItems.map((item) => {
                             return (
                                 <li key={item.id}>
@@ -40,15 +40,7 @@ function DesktopMenu({ menuItems }) {
                 </div>
 
                 {/* social medias */}
-                <div className="my-auto max-lg:hidden flex gap-2">
-                    <a
-                        className="btn btn-ghost btn-circle text-red-400"
-                        href="https://www.instagram.com/glassco.home?igsh=ajUza2RieDQ5OG9q"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <BsInstagram size={24} />
-                    </a>
+                <div className="my-auto flex gap-1">
                     <a
                         className="btn btn-ghost btn-circle text-green-400"
                         href="https://wa.me/09036202425"
@@ -56,6 +48,14 @@ function DesktopMenu({ menuItems }) {
                         rel="noopener noreferrer"
                     >
                         <BsWhatsapp size={24} />
+                    </a>
+                    <a
+                        className="btn btn-ghost btn-circle text-red-400"
+                        href="https://www.instagram.com/glassco.home?igsh=ajUza2RieDQ5OG9q"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <BsInstagram size={24} />
                     </a>
                 </div>
             </div>

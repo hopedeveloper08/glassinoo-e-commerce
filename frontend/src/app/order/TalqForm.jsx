@@ -91,7 +91,7 @@ function TalqForm({
     }
 
     return (
-        <div className="space-y-8 card border-1 border-secondary shadow p-4 bg-base-100 lg:w-6/10 mx-auto">
+        <div className="space-y-8 p-4 lg:w-6/10 mx-auto card shadow border-2 border-primary/20 bg-primary/3">
 
             {/* انتخاب شکل */}
             <div className="flex flex-col items-center gap-2">
@@ -148,14 +148,14 @@ function TalqForm({
                 <>
                     <div>
                         <h4 className="font-bold">ابعاد</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+                        <div className="grid grid-cols-1 gap-2 mt-2">
                             {shape === "مستطیل" && (
                                 <>
                                     <input
                                         min={0}
                                         type="number"
                                         placeholder="طول (سانتی متر)"
-                                        className="input input-secondary w-full"
+                                        className="input input-secondary md:w-1/2 mx-auto"
                                         step={0.1}
                                         onChange={(e) => setLength(parseFloat(e.target.value))}
                                     />
@@ -163,7 +163,7 @@ function TalqForm({
                                         min={0}
                                         type="number"
                                         placeholder="عرض (سانتی متر)"
-                                        className="input input-secondary w-full"
+                                        className="input input-secondary md:w-1/2 mx-auto"
                                         step={0.1}
                                         onChange={(e) => setWidth(parseFloat(e.target.value))}
                                     />
@@ -174,7 +174,7 @@ function TalqForm({
                                     min={0}
                                     type="number"
                                     placeholder="قطر (سانتی متر)"
-                                    className="input input-secondary w-full"
+                                    className="input input-secondary md:w-1/2 mx-auto"
                                     step={0.1}
                                     onChange={(e) => setWidth(parseFloat(e.target.value))}
                                 />
@@ -185,7 +185,7 @@ function TalqForm({
                                         min={0}
                                         type="number"
                                         placeholder="قطر بزرگ (سانتی متر)"
-                                        className="input input-secondary w-full"
+                                        className="input input-secondary md:w-1/2 mx-auto"
                                         step={0.1}
                                         onChange={(e) => setLength(parseFloat(e.target.value))}
                                     />
@@ -193,7 +193,7 @@ function TalqForm({
                                         min={0}
                                         type="number"
                                         placeholder="قطر کوچک (سانتی متر)"
-                                        className="input input-secondary w-full"
+                                        className="input input-secondary md:w-1/2 mx-auto"
                                         step={0.1}
                                         onChange={(e) => setWidth(parseFloat(e.target.value))}
                                     />
@@ -214,7 +214,7 @@ function TalqForm({
                             type="file"
                             multiple
                             accept="image/*"
-                            className="file-input file-input-secondary file-input-bordered w-full mt-2"
+                            className="file-input file-input-secondary file-input-bordered w-full mt-2 md:w-1/2"
                             onChange={handleImageUpload}
                         />
                     </div>

@@ -97,8 +97,8 @@ function Invoice({
     }
 
     return (
-        <div className="w-full card border-1 border-secondary max-w-3xl mx-auto bg-base-100 shadow-lg rounded-xl py-4 px-6 md:p-6 flex flex-col">
-            <h2 className="text-xl md:text-2xl font-bold text-base-content mb-2">
+        <div className="w-full lg:w-6/10 max-w-3xl mx-auto py-4 px-6 md:p-6 flex flex-col card shadow border-2 border-primary/20 bg-primary/3">
+            <h2 className="text-xl md:text-2xl font-bold text-base-content/80 mb-2">
                 خلاصه سفارش
             </h2>
 
@@ -106,24 +106,24 @@ function Invoice({
                 <table className="table table-sm md:table-md table-zebra w-full">
                     <tbody>
                         <tr>
-                            <td className="font-semibold text-sm md:text-md lg:text-lg">نوع میز</td>
-                            <td className="text-sm md:text-md lg:text-lg">{tableType?.title}</td>
+                            <td className="font-semibold text-base lg:text-lg text-base-content/90">نوع میز</td>
+                            <td className="text-base lg:text-lg text-base-content/80">{tableType?.title}</td>
                         </tr>
                         <tr>
-                            <td className="font-semibold text-sm md:text-md lg:text-lg">جنس میز</td>
-                            <td className="text-sm md:text-md lg:text-lg">{tableMaterial?.title}</td>
+                            <td className="font-semibold text-base lg:text-lg text-base-content/90">جنس میز</td>
+                            <td className="text-base lg:text-lg text-base-content/80">{tableMaterial?.title}</td>
                         </tr>
                         <tr>
-                            <td className="font-semibold text-sm md:text-md lg:text-lg">شکل میز</td>
-                            <td className="text-sm md:text-md lg:text-lg">{shape}</td>
+                            <td className="font-semibold text-base lg:text-lg text-base-content/90">شکل میز</td>
+                            <td className="text-base lg:text-lg text-base-content/80">{shape}</td>
                         </tr>
                         <tr>
-                            <td className="font-semibold text-sm md:text-md lg:text-lg">طلق انتخابی</td>
-                            <td className="text-sm md:text-md lg:text-lg">{talqType?.title} - ضخامت {thickness} میلی‌متر</td>
+                            <td className="font-semibold text-base lg:text-lg text-base-content/90">طلق انتخابی</td>
+                            <td className="text-base lg:text-lg text-base-content/80">{talqType?.title} - ضخامت {thickness} میلی‌متر</td>
                         </tr>
                         <tr>
-                            <td className="font-semibold text-sm md:text-md lg:text-lg">ابعاد</td>
-                            <td className="text-sm md:text-md lg:text-lg">
+                            <td className="font-semibold text-base lg:text-lg text-base-content/90">ابعاد</td>
+                            <td className="text-base lg:text-lg text-base-content/80">
                                 {shape === "مستطیل" &&
                                     `${length} × ${width} سانتی متر`}
                                 {shape === "دایره" && `قطر ${width} سانتی متر`}
@@ -163,13 +163,13 @@ function Invoice({
 
             <div className="flex flex-col md:flex-row gap-4 justify-end mt-4">
                 <button
-                    className="btn rounded-md btn-success btn-sm md:btn-md md:flex-none md:order-2"
+                    className="btn rounded-md btn-success btn-md md:flex-none md:order-2"
                     onClick={addToCart}
                 >
                     افزودن به سبد خرید
                 </button>
                 <button
-                    className="btn rounded-md btn-error btn-sm md:btn-md btn-outline md:flex-none"
+                    className="btn rounded-md btn-error btn-md btn-outline md:flex-none"
                     onClick={() => window.location.reload()}
                 >
                     لغو سفارش
@@ -202,7 +202,7 @@ function Invoice({
 
                     <div className="modal-action flex justify-end gap-2">
                         <button
-                            className="btn btn-sm md:btn-md rounded-md btn-secondary btn-outline"
+                            className="btn btn-sm md:btn-md rounded-md btn-primary btn-outline"
                             onClick={() => {
                                 window.location.reload()
                             }}

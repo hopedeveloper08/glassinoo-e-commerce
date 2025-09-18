@@ -29,7 +29,7 @@ function Order() {
     const [images, setImages] = useState([])
 
     return (
-        <main className="container mx-auto">
+        <main className="container">
             <FormWizard
                 stepSize='xs'
                 color="oklch(60% 0.18 250)"
@@ -44,7 +44,7 @@ function Order() {
                             نوع میز خود را از گالری زیر انتخاب کنید
                         </h3>
                     </div>
-                    <section className='h-[calc(100vh-18rem)] mt-2 overflow-y-auto px-4'>
+                    <section className='h-[calc(100vh-18rem)] mt-2 overflow-y-auto py-4'>
                         <Gallery nextStep={nextStep} url='tables/type/' setItem={setTableType} />
                     </section>
                 </FormWizard.TabContent>
@@ -55,7 +55,7 @@ function Order() {
                             جنس میز خود را از گالری زیر انتخاب کنید
                         </h3>
                     </div>
-                    <section className='h-[calc(100vh-18rem)] mt-2 overflow-y-auto p-4'>
+                    <section className='h-[calc(100vh-18rem)] mt-2 overflow-y-auto py-4'>
                         <Gallery nextStep={nextStep} url='tables/material/' setItem={setTableMaterial} />
                     </section>
                 </FormWizard.TabContent>
@@ -66,7 +66,7 @@ function Order() {
                             جنس طلق خود را از گالری زیر انتخاب کنید
                         </h3>
                     </div>
-                    <section className='h-[calc(100vh-18rem)] mt-2 overflow-y-auto p-4'>
+                    <section className='h-[calc(100vh-18rem)] mt-2 overflow-y-auto py-4'>
                         <Gallery nextStep={nextStep} url='talqs/type/' params={tableMaterial ? { table_id: tableMaterial.id } : null} setItem={setTalqType} />
                     </section>
                 </FormWizard.TabContent>
@@ -92,7 +92,7 @@ function Order() {
                         />
                     </section>
                 </FormWizard.TabContent>
-                <FormWizard.TabContent title='فاکتور' icon={<CgNotes />}>
+                <FormWizard.TabContent title='خلاصه' icon={<CgNotes />}>
                     <section className='h-[calc(100vh-16rem)] overflow-y-auto p-4'>
                         <Invoice
                             tableType={tableType}
