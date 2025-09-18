@@ -5,7 +5,7 @@ import 'swiper/css'
 function GalleryItem({ item, submitHandler }) {
     return (
         <div
-            className="card shadow border-2 border-primary/20 bg-primary/3 hover:opacity-80 hover:shadow-primary hover:shadow-lg transition-all hover:cursor-pointer"
+            className="card shadow border border-primary/20 bg-primary/3 hover:opacity-80 hover:shadow-primary hover:shadow-lg transition-all hover:cursor-pointer"
             onClick={() => submitHandler(item)}
         >
             <figure className="relative h-64 w-full overflow-hidden">

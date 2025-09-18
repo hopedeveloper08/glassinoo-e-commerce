@@ -97,7 +97,7 @@ function Invoice({
     }
 
     return (
-        <div className="w-full lg:w-6/10 max-w-3xl mx-auto py-4 px-6 md:p-6 flex flex-col card shadow border-2 border-primary/20 bg-primary/3">
+        <div className="w-full lg:w-6/10 max-w-3xl mx-auto py-4 px-6 md:p-6 flex flex-col card shadow border border-primary/20 bg-primary/3">
             <h2 className="text-xl md:text-2xl font-bold text-base-content/80 mb-2">
                 خلاصه سفارش
             </h2>

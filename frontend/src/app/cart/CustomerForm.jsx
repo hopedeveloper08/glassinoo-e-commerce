@@ -20,7 +20,7 @@ function CustomerForm({
     const [showMap, setShowMap] = useState(false);
 
     return (
-        <form className="flex flex-col items-center gap-8 my-6 w-full md:w-3/4 lg:w-2/3 mx-auto">
+        <form className="flex flex-col items-center gap-4 my-6 w-full md:w-3/4 lg:w-2/3 mx-auto px-4">
             {/* customer info */}
             <div className="w-full flex flex-col items-center gap-2">
                 <div className="font-bold text-base-content/80 text-lg">اطلاعات مشتری</div>
@@ -30,8 +30,8 @@ function CustomerForm({
                 </div>
             </div>
             {/* post method */}
-            <div className="w-full flex flex-col items-center gap-2">
-                <div className="font-bold text-base-content/80 text-lg">روش ارسال</div>
+            <div className="w-full flex flex-col items-center gap-3">
+                <div className="font-bold text-base-content/80 text-lg">ارسال</div>
                 <div className="w-full flex justify-evenly"
                     onChange={e => setPostMethod(parseInt(e.target.value))}
                 >
@@ -48,35 +48,34 @@ function CustomerForm({
                         <span>درب فروشگاه</span>
                     </label>
                 </div>
-            </div>
-            {/* address */}
-            {postMethod !== 2 && (
-                <div className="w-full flex flex-col items-center gap-2">
-                    <div className="font-bold text-base-content/80 text-lg">اطلاعات ارسال</div>
-                    <div className="w-full container flex flex-col items-center gap-2">
-                        <textarea rows='2' value={address} onChange={e => setAddress(e.target.value)} placeholder="آدرس خود را وارد کنید..." className="textarea w-full textarea-secondary" />
-                        {postMethod === 0 && (
-                            <button
-                                type='button'
-                                onClick={() => setShowMap(true)}
-                                className="btn btn-primary btn-dash"
-                            >
-                                <GrLocation size={20} /> ثبت موقعیت روی نقشه
-                            </button>
-                        )}
+                {/* address */}
+                {postMethod !== 2 && (
+                    <div className="w-full flex flex-col items-center gap-2">
+                        <div className="w-full container flex flex-col items-center gap-2">
+                            {postMethod === 0 && (
+                                <button
+                                    type='button'
+                                    onClick={() => setShowMap(true)}
+                                    className="btn btn-primary btn-dash w-full"
+                                >
+                                    <GrLocation size={20} /> ثبت موقعیت روی نقشه
+                                </button>
+                            )}
+                            <textarea rows='2' value={address} onChange={e => setAddress(e.target.value)} placeholder="آدرس خود را وارد کنید..." className="textarea w-full textarea-secondary" />
 
-                        {showMap && (
-                            <Map
-                                lng={lng}
-                                lat={lat}
-                                setLng={setLng}
-                                setLat={setLat}
-                                onClose={() => setShowMap(false)}
-                            />
-                        )}
+                            {showMap && (
+                                <Map
+                                    lng={lng}
+                                    lat={lat}
+                                    setLng={setLng}
+                                    setLat={setLat}
+                                    onClose={() => setShowMap(false)}
+                                />
+                            )}
+                        </div>
                     </div>
-                </div>
-            )}
+                )}
+            </div>
         </form >
 
     )

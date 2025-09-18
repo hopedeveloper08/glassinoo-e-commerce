@@ -10,7 +10,7 @@ function Summary({ cart, postMethod, onSubmit }) {
     const totalPrice = itemPrice + (postMethod === 0 ? postage : 0)
 
     return (
-        <div className="flex flex-col justify-center items-center h-full gap-8 my-6 w-full md:w-4/5 lg:w-3/4 mx-auto">
+        <div className="flex flex-col justify-center items-center h-full gap-8 my-6 px-4 w-full md:w-4/5 lg:w-3/4 mx-auto">
             <div className="font-bold text-base-content/80 text-xl">خلاصه پرداخت</div>
             <table className="table">
                 <tbody className="text-base md:text-lg text-base-content/80">
@@ -31,7 +31,7 @@ function Summary({ cart, postMethod, onSubmit }) {
                 </tbody>
             </table>
             <Terms setAgree={setAgree} />
-            <button className="btn btn-primary w-full text-xl" disabled={!agree} onClick={onSubmit} >پرداخت</button>
+            <button className="btn btn-primary w-full text-xl" disabled={!agree} onClick={onSubmit} >ثبت سفارش و پرداخت</button>
         </div>
     )
 }

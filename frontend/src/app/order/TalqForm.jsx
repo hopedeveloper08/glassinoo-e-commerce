@@ -91,7 +91,7 @@ function TalqForm({
     }
 
     return (
-        <div className="space-y-8 p-4 lg:w-6/10 mx-auto card shadow border-2 border-primary/20 bg-primary/3">
+        <div className="space-y-8 p-4 lg:w-6/10 mx-auto card shadow border border-primary/20 bg-primary/3">
 
             {/* انتخاب شکل */}
             <div className="flex flex-col items-center gap-2">
