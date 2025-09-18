@@ -37,7 +37,7 @@ function CustomerForm({
                 >
                     <label className="space-x-1 lg:space-x-2 hover:cursor-pointer">
                         <input type="radio" value={0} name="address-method" className="radio radio-sm md:radio-md radio-primary" defaultChecked />
-                        <span>در شیراز</span>
+                        <span>به شهر شیراز</span>
                     </label>
                     <label className="space-x-1 lg:space-x-2 hover:cursor-pointer">
                         <input type="radio" value={1} name="address-method" className="radio radio-sm md:radio-md radio-primary" />
@@ -54,12 +54,12 @@ function CustomerForm({
                 <div className="w-full flex flex-col items-center gap-2">
                     <div className="font-bold text-base-content/80 text-lg">اطلاعات ارسال</div>
                     <div className="w-full container flex flex-col items-center gap-2">
-                        <textarea type="text" rows="2" value={address} onChange={e => setAddress(e.target.value)} placeholder="آدرس خود را وارد کنید..." className="input w-full input-secondary p-2" />
+                        <textarea rows='2' value={address} onChange={e => setAddress(e.target.value)} placeholder="آدرس خود را وارد کنید..." className="textarea w-full textarea-secondary" />
                         {postMethod === 0 && (
                             <button
                                 type='button'
                                 onClick={() => setShowMap(true)}
-                                className="btn btn-primary"
+                                className="btn btn-primary btn-dash"
                             >
                                 <GrLocation size={20} /> ثبت موقعیت روی نقشه
                             </button>

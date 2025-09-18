@@ -22,7 +22,7 @@ function Menu() {
         },
         {
             id: 3,
-            title: 'سبد خرید',
+            title: 'ثبت سفارش',
             link: '/cart',
             icon: BsCart3
         },

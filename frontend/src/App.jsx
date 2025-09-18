@@ -17,7 +17,7 @@ function App() {
     return (
         <>
             <Menu />
-            <div className="h-[calc(100vh-4rem)]">
+            <div className="min-h-[calc(100vh-4rem)]">
                 {routes}
             </div>
         </>

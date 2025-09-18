@@ -22,8 +22,8 @@ function Cart() {
     )
 
     return (
-        <main className="container mt-4 pb-16">
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <main className="container mt-12 pb-18">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
                 <section className="md:col-span-3 card shadow border-2 border-primary/20 bg-primary/3">
                     <CustomerForm
                         name={name}
@@ -40,7 +40,7 @@ function Cart() {
                         setLat={setLat}
                     />
                 </section>
-                <section className="md:col-span-2 card shadow border-2 border-primary/20 bg-primary/3"><Summary /></section>
+                <section className="md:col-span-2 card shadow border-2 border-primary/20 bg-primary/3"><Summary cart={cart} postMethod={postMethod} /></section>
             </div>
         </main>
     )
