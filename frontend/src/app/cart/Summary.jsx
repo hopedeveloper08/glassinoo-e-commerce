@@ -2,10 +2,10 @@ import { useState } from 'react'
 
 import Terms from './Terms'
 
-function Summary({ cart, postMethod, onSubmit }) {
+function Summary({ cart, postMethod, pay, loading }) {
     const [agree, setAgree] = useState(false)
 
-    const postage = 80_000
+    const postage = 98_000
     const itemPrice = cart.reduce((prev, curr) => prev + curr.price, 0)
     const totalPrice = itemPrice + (postMethod === 0 ? postage : 0)
 
@@ -31,7 +31,10 @@ function Summary({ cart, postMethod, onSubmit }) {
                 </tbody>
             </table>
             <Terms setAgree={setAgree} />
-            <button className="btn btn-primary w-full text-xl" disabled={!agree} onClick={onSubmit} >ثبت سفارش و پرداخت</button>
+            <button className="btn btn-primary w-full text-xl" disabled={!agree || loading} onClick={pay} >
+                {loading && <span className="loading loading-spinner loading-md text-primary mx-2"></span>}
+                ثبت سفارش و پرداخت
+            </button>
         </div>
     )
 }

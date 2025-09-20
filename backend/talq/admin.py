@@ -3,10 +3,10 @@ from django.contrib import admin
 from .models import TalqType, TalqTypeImage, Talq
 
 
-class TalqTypeImageInline(admin.TabularInline):
+class TalqTypeImageInline(admin.StackedInline):
     model = TalqTypeImage
     fields = ['image']
-    extra = 1
+    extra = 0
     
     
 @admin.register(TalqType)

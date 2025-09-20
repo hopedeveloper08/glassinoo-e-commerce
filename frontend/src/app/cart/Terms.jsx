@@ -4,7 +4,7 @@ function Terms({ setAgree }) {
     return (
         <>
             <div className="flex gap-2">
-                <input type="checkbox" className="checkbox checkbox-primary" onClick={() => setAgree(prev => !prev)} />
+                <input type="checkbox" className="checkbox checkbox-primary" onClick={e => setAgree(e.target.checked)} />
                 <div className="text-base-content">
                     <span className="link text-primary font-bold" onClick={() => document.getElementById('terms').showModal()}>شرایط و ضوابط</span>{' '}
                     خرید را مطالعه کردم و با آن موافقم

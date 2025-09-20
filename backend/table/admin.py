@@ -3,10 +3,10 @@ from django.contrib import admin
 from .models import TableType, TableTypeImage, TableMaterial, TableMaterialImage
 
 
-class TableTypeImageInline(admin.TabularInline):
+class TableTypeImageInline(admin.StackedInline):
     model = TableTypeImage
     fields = ['image']
-    extra = 1
+    extra = 0
     
     
 @admin.register(TableType)
@@ -17,10 +17,10 @@ class TableTypeAdmin(admin.ModelAdmin):
     inlines = [TableTypeImageInline]
     
 
-class TableMaterialImageInline(admin.TabularInline):
+class TableMaterialImageInline(admin.StackedInline):
     model = TableMaterialImage
     fields = ['image']
-    extra = 1
+    extra = 0
     
     
 @admin.register(TableMaterial)

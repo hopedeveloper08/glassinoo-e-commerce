@@ -4,6 +4,7 @@ import Menu from "./app/menu/Menu"
 import Main from "./app/main/Main"
 import Order from "./app/order/Order"
 import Cart from "./app/cart/Cart"
+import PaymentCallback from "./app/payment/PaymentCallback"
 import Error404 from "./app/main/Error404"
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         { path: '/', element: <Main /> },
         { path: '/order/', element: <Order /> },
         { path: '/cart/', element: <Cart /> },
+        { path: '/payment/callback/', element: <PaymentCallback /> },
         { path: '*', element: <Error404 /> },
     ])
 

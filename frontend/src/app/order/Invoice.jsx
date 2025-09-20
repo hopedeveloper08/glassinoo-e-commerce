@@ -39,7 +39,7 @@ function Invoice({
             }
         }
 
-        return Math.round(parseInt((price * (talqLength * 1.05)) / 100) / 1000) * 1000;
+        return parseInt((price * (talqLength * 1.05)) / 100) 
     }
 
     const priceForCircle = () => {

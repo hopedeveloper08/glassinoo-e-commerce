@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
+
+import backend from '../../api'
 
 import CustomerForm from "./CustomerForm"
 import Summary from "./Summary"
@@ -12,6 +14,9 @@ function Cart() {
     const [lat, setLat] = useState(0)
     const [postMethod, setPostMethod] = useState(0)
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || [])
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(false)
+
 
     const removeItem = (index) => {
         const updated = cart.filter((_, i) => i !== index);
@@ -26,6 +31,49 @@ function Cart() {
             </div>
         </div>
     )
+
+    const pay = async () => {
+        setLoading(true)
+
+        if (!name || !phone || (postMethod === 0 && !address)) {
+            setError(true)
+            setLoading(false)
+            return
+        }
+        setError(false)
+
+        const customerInfo = {
+            name,
+            phone,
+            address,
+            lng,
+            lat,
+            postMethod,
+        }
+
+        try {
+            const { data } = await backend.post('order/initiate_payment/', {
+                customerInfo,
+                cart: cart.map(item => ({
+                    ...item,
+                    tableType: item.tableType.title,
+                    tableMaterial: item.tableMaterial.title,
+                    talqType: item.talqType.title,
+                    talqID: item.talqType.id,
+                }))
+            })
+            setLoading(false)
+            
+            window.location.href = data.url
+            
+        } catch (err) {
+            console.log(err);
+            
+            setLoading(false)
+            alert("مشکلی در شروع پرداخت پیش آمده است.")
+        }
+    }
+
 
     return (
         <main className="container mt-8 pb-18">
@@ -45,9 +93,10 @@ function Cart() {
                         setLng={setLng}
                         lat={lat}
                         setLat={setLat}
+                        error={error}
                     />
                 </section>
-                <section className="lg:col-span-2 card shadow border border-primary/20 bg-primary/3"><Summary cart={cart} postMethod={postMethod} /></section>
+                <section className="lg:col-span-2 card shadow border border-primary/20 bg-primary/3"><Summary cart={cart} postMethod={postMethod} pay={pay} loading={loading} /></section>
             </div>
         </main>
     )

@@ -16,6 +16,7 @@ function CustomerForm({
     setLng,
     lat,
     setLat,
+    error,
 }) {
     const [showMap, setShowMap] = useState(false);
 
@@ -75,6 +76,11 @@ function CustomerForm({
                         </div>
                     </div>
                 )}
+                {error &&
+                    <p className="text-error text-sm mt-1">
+                        اطلاعات خود را به درستی وارد کنید
+                    </p>
+                }
             </div>
         </form >
 

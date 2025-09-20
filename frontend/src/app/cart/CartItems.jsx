@@ -13,6 +13,7 @@ function CartItems({ cart, removeItem }) {
                         <th>شکل میز</th>
                         <th>ضخامت</th>
                         <th>ابعاد</th>
+                        <th>قیمت</th>
                         <th>حذف؟</th>
                     </tr>
                 </thead>
@@ -26,6 +27,7 @@ function CartItems({ cart, removeItem }) {
                             <td>{item.shape}</td>
                             <td>{item.thickness} میلی متر</td>
                             <td>{item.shape === 'دایره' ? `${item.width} سانتی متر` : `${item.length} * ${item.width} سانتی متر`}</td>
+                            <td>{(item.price).toLocaleString()}</td>
                             <td><button
                                 className="btn btn-error btn-circle btn-outline btn-sm md:btn-md"
                                 onClick={() => removeItem(i)}
