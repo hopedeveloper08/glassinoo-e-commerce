@@ -16,20 +16,24 @@ class TalqType(models.Model):
 
     @classmethod
     def get_talqs_by_table(cls, table_id, request):
-        talqs_type = cls.objects.filter(tables__id=table_id)
-        return [
-            {
+        talqs_type = cls.objects.all()
+        result = []
+        for talq_type in talqs_type:
+            data = {
                 'id': talq_type.id,
                 'title': talq_type.title,
                 'image_urls': [
                     request.build_absolute_uri(x.image.url)
                     for x in TalqTypeImage.objects.filter(talq_type=talq_type)
                 ],
-            }
-            for talq_type in talqs_type
-        ]
-      
-
+                'is_disable': True,
+            } 
+            if talq_type.tables.filter(id=table_id).exists():
+                data['is_disable'] = False
+            result.append(data)
+        return result
+    
+    
 class TalqTypeImage(models.Model):
     talq_type = models.ForeignKey(TalqType, on_delete=models.CASCADE, verbose_name='نوع طلق')
     image = models.ImageField(upload_to='talq_image/', verbose_name='عکس')

@@ -6,6 +6,7 @@ import Order from "./app/order/Order"
 import Cart from "./app/cart/Cart"
 import PaymentCallback from "./app/payment/PaymentCallback"
 import Error404 from "./app/main/Error404"
+import AboutUs from "./app/about-us/AboutUs"
 
 function App() {
     const routes = useRoutes([
@@ -13,6 +14,7 @@ function App() {
         { path: '/order/', element: <Order /> },
         { path: '/cart/', element: <Cart /> },
         { path: '/payment/callback/', element: <PaymentCallback /> },
+        { path: '/about-us/', element: <AboutUs /> },
         { path: '*', element: <Error404 /> },
     ])
 

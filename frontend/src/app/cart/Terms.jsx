@@ -16,7 +16,11 @@ function Terms({ setAgree }) {
                     <form method="dialog">
                         <button className="btn btn-sm btn-circle btn-error absolute right-2 top-2"><IoMdClose size={16} /></button>
                     </form>
-                    <p className="py-8">شرایط همینه دیگه چاره ای نیست باید بپذیری و بخری</p>
+                    <p className="py-8">
+                        با سلام به فروشگاه طلق های رو میزی گلاسینو خوش آمدید.
+                        هدف ما حفظ سلامت میز و ایجاد زیبایی در میز شما است.
+                        
+                    </p>
                 </div>
                 <form method="dialog" className="modal-backdrop">
                     <button>close</button>

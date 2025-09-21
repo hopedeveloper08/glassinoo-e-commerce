@@ -39,7 +39,7 @@ function Invoice({
             }
         }
 
-        return parseInt((price * (talqLength * 1.05)) / 100) 
+        return parseInt((price * (talqLength * 1.05)) / 100)
     }
 
     const priceForCircle = () => {
@@ -132,12 +132,21 @@ function Invoice({
                             </td>
                         </tr>
                         {shape === "دایره" &&
-                            <tr>
-                                <td className="font-semibold text-sm md:text-md lg:text-lg">هزینه برش لیزری</td>
-                                <td className="text-sm md:text-md lg:text-lg">
-                                    {circleExtra.toLocaleString()} تومان
-                                </td>
-                            </tr>}
+                            <>
+                                <tr>
+                                    <td className="font-semibold text-sm md:text-md lg:text-lg">هزینه طلق شما</td>
+                                    <td className="text-sm md:text-md lg:text-lg">
+                                        {basePrice.toLocaleString()} تومان
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="font-semibold text-sm md:text-md lg:text-lg">هزینه برش لیزری</td>
+                                    <td className="text-sm md:text-md lg:text-lg">
+                                        {circleExtra.toLocaleString()} تومان
+                                    </td>
+                                </tr>
+                            </>
+                        }
                         {shape === "بیضی" &&
                             <tr>
                                 <td className="font-semibold text-sm md:text-md lg:text-lg">هزینه برش لیزری</td>

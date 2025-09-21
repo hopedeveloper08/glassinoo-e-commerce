@@ -3,11 +3,24 @@ import { Autoplay, Zoom } from 'swiper/modules'
 import 'swiper/css'
 
 function GalleryItem({ item, submitHandler }) {
+    const isDisabled = item?.is_disable ?? false;
+
     return (
         <div
-            className="card shadow border border-primary/20 bg-primary/3 hover:opacity-80 hover:shadow-primary hover:shadow-lg transition-all hover:cursor-pointer"
-            onClick={() => submitHandler(item)}
+            className={`
+                card shadow border border-primary/20 bg-primary/3 relative
+                ${isDisabled ? '[&>figure,p]:opacity-30' : 'hover:opacity-80 hover:shadow-primary hover:shadow-lg transition-all duration-200 hover:cursor-pointer'}
+            `}
+            onClick={() => isDisabled ? null : submitHandler(item)}
         >
+            {isDisabled && (
+                <button
+                    className="btn btn-secondary btn-sm mx-5 py-8 absolute top-0 bottom-0 right-0 left-0 m-auto z-50"
+                    onClick={() => submitHandler(item)}
+                >
+                    این طلق مناسب میز انتخابی شما نیست، در صورتی که این جنس طلق را میخواهید با رضایت خودتان کلیک کنید
+                </button>
+            )}
             <figure className="relative h-64 w-full overflow-hidden">
                 {item.image_urls.length < 2 ? (
                     <img

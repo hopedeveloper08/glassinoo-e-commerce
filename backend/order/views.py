@@ -10,12 +10,19 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from zarinpal import ZarinPal
-from utils.Config import Config
+from typing import Optional
 
 from .price_calculation import price_calculation
 from .models import Order, OrderItem, OrderItemImage
 from .serializers import PaymentInitiateSerializer
 
+
+class Config:
+    def __init__(self, sandbox: Optional[bool] = None, merchant_id: Optional[str] = None, access_token: Optional[str] = None):
+        self.sandbox = sandbox
+        self.merchant_id = merchant_id
+        self.access_token = access_token
+        
 ZARINPAL = ZarinPal(Config(merchant_id=os.getenv('MERCHANT_ID'), sandbox=True))
 
 @api_view(['POST'])
