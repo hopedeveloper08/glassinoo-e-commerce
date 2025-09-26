@@ -61,16 +61,13 @@ function Cart() {
                     talqType: item.talqType.title,
                     talqID: item.talqType.id,
                 }))
-            })
-            setLoading(false)
-            
+            })            
             window.location.href = data.url
             
-        } catch (err) {
-            console.log(err);
-            
-            setLoading(false)
+        } catch {    
             alert("مشکلی در شروع پرداخت پیش آمده است.")
+        } finally {
+            setLoading(false)
         }
     }
 

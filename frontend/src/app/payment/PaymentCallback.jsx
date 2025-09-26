@@ -17,7 +17,7 @@ export default function PaymentCallback() {
             navigate("/cart");
             return;
         }
-
+        
         backend.get("order/verify_payment/", {
             params: { status, authority, order_id }
         }).then(res => {
@@ -26,7 +26,8 @@ export default function PaymentCallback() {
                 localStorage.removeItem("cart")
                 navigate("/");
             } else {
-                alert('ناموفق باگ داریم!')
+                alert('پرداخت ناموفق! سفارش ثبت نشد...')
+                navigate("/cart");
             }
         }).catch(err => {
             console.error(err);

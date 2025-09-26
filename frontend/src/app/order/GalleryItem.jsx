@@ -15,10 +15,15 @@ function GalleryItem({ item, submitHandler }) {
         >
             {isDisabled && (
                 <button
-                    className="btn btn-secondary btn-sm mx-5 py-8 absolute top-0 bottom-0 right-0 left-0 m-auto z-50"
+                    className="btn btn-secondary btn-sm mx-5 py-8 absolute top-0 bottom-0 right-0 left-0 m-auto z-50 opacity-90"
                     onClick={() => submitHandler(item)}
                 >
-                    این طلق مناسب میز انتخابی شما نیست، در صورتی که این جنس طلق را میخواهید با رضایت خودتان کلیک کنید
+                    <div>
+                        <span>
+                            طلق {item.title} مناسب میز انتخابی شما نیست، در صورتی که این جنس طلق را میخواهید
+                        </span>{' '}
+                        <span className='text-error underline'>با رضایت خودتان کلیک کنید</span>
+                    </div>
                 </button>
             )}
             <figure className="relative h-64 w-full overflow-hidden">

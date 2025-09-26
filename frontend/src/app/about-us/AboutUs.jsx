@@ -1,6 +1,6 @@
 function AboutUs() {
     return (
-        <main className="w-full h-full flex justify-center mt-16">
+        <main className="w-full h-full flex justify-center mt-16 mx-8">
             <div className="alert bg-primary/20 flex flex-col justify-center">
                 <p className="text-lg text-base-content/80">
                     با سلام به فروشگاه طلق های رو میزی گلاسینو خوش آمدید.
@@ -13,7 +13,7 @@ function AboutUs() {
                     شماره تماس: 09036202425
                 </p>
                 <div className="flex justify-evenly w-1/2">
-                    <div >
+                    <div id="zarinpal">
                         <script src="https://www.zarinpal.com/webservice/TrustCode" type="text/javascript"></script>
                     </div>
                     <div>
